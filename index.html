@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SME&C CxO를 위한 Copilot 월간 뉴스레터. 이번 달 주요 인사이트와 지난 뉴스레터를 확인하세요.">
+  <meta name="theme-color" content="#101425">
+  <title>Copilot Newsletter | SME&amp;C CxO</title>
+  <style>
+    :root { color-scheme: dark; --bg: #101425; --panel: #191f33; --ink: #f5f6fc; --muted: #b3bdd2; --line: #343e55; --accent: #b9caff; --max: 1100px; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Segoe UI", "Malgun Gothic", Arial, sans-serif; line-height: 1.7; }
+    a { color: inherit; }
+    .container { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .topbar { border-bottom: 1px solid var(--line); background: #121729; }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-symbol { display: grid; place-items: center; flex: 0 0 40px; height: 40px; border: 1px solid #556389; border-radius: 12px; background: linear-gradient(135deg, #343859, #213953); color: #d5e1ff; font-size: 23px; }
+    .brand-name { display: block; font-size: 19px; font-weight: 700; letter-spacing: -.02em; line-height: 1.4; }
+    .brand small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .nav { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin-left: auto; font-size: 13px; }
+    .nav a { padding: 10px 14px; border: 1px solid transparent; border-radius: 8px; text-decoration: none; }
+    .nav a:first-child { background: #262e47; border-color: #465371; color: #e1e8ff; }
+    .nav a:hover { background: #303b57; }
+    .intro { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); background: radial-gradient(ellipse at 76% 40%, #3a2c615c, transparent 48%), radial-gradient(ellipse at 96% 5%, #234b7059, transparent 38%), linear-gradient(115deg, #0b1021, #17162f 58%, #101b2c); }
+    .intro-inner { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: center; gap: 32px; padding-block: 64px; }
+    .intro-copy { position: relative; z-index: 1; min-width: 0; }
+    .eyebrow { margin: 0 0 10px; color: var(--accent); font-size: 12px; font-weight: 600; letter-spacing: .12em; }
+    h1 { margin: 0; font-size: clamp(30px, 3.8vw, 48px); line-height: 1.35; letter-spacing: -.04em; }
+    h1 .accent { color: transparent; background: linear-gradient(95deg, #c4b5fd, #7dd3fc 68%, #bef264); background-clip: text; -webkit-background-clip: text; }
+    .intro-description { margin: 20px 0 0; color: #c2c7d9; font-size: 16px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .hero-actions .button { border-color: transparent; background: linear-gradient(100deg, #a78bfa, #78c8f7); }
+    .hero-actions .button:hover { background: #d9e4ff; }
+    .hero-actions .button-secondary { border-color: #ffffff40; background: #ffffff08; color: var(--ink); }
+    .hero-actions .button-secondary:hover { background: #ffffff14; }
+    .hero-art { position: relative; min-height: 350px; display: grid; place-items: center; }
+    .hero-art::before { content: ""; position: absolute; width: 470px; aspect-ratio: 1; border: 1px solid #a78bfa26; border-radius: 50%; box-shadow: 0 0 100px #724cd229, inset 0 0 90px #67e8f90f; }
+    .orbit { position: absolute; width: min(100%, 420px); aspect-ratio: 1; border: 1px solid #c2b5fd47; border-radius: 50%; transform: rotate(-18deg) scaleY(.66); }
+    .orbit.two { width: 350px; border-color: #67e8f952; transform: rotate(38deg) scaleY(.69); }
+    .orbit.three { width: 265px; border-color: #bef26452; transform: rotate(-48deg) scaleY(.7); }
+    .orb-core { position: relative; width: 178px; height: 178px; display: grid; place-items: center; border: 1px solid #ffffff57; border-radius: 42px; background: linear-gradient(145deg, #a78bfa47, #142139b3 55%, #67e8f92b); box-shadow: 0 0 90px #8b5cf64d, inset 0 0 45px #ffffff0f; transform: rotate(-8deg); }
+    .orb-core span { color: #f2edff; font-size: 72px; line-height: 1; text-shadow: 0 0 35px #67e8f9a6; transform: rotate(8deg); }
+    .float-tag { position: absolute; display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid #ffffff2b; border-radius: 9px; background: #0c1124e6; color: #e5e8f7; font-size: 11px; box-shadow: 0 12px 36px #0003; }
+    .float-tag b { color: #67e8f9; font-size: 14px; }
+    .tag-one { top: 12%; left: 0; }
+    .tag-two { top: 28%; right: 0; }
+    .tag-three { bottom: 17%; left: 0; }
+    .tag-four { bottom: 5%; right: 0; }
+    .signal { width: 7px; height: 7px; border-radius: 50%; background: #bef264; box-shadow: 0 0 12px #bef264; }
+    .section { padding-block: 38px; }
+    .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+    h2 { margin: 0; font-size: clamp(21px, 3vw, 27px); line-height: 1.5; letter-spacing: -.03em; }
+    .year { flex-shrink: 0; color: var(--muted); font-size: 13px; }
+    .featured { overflow: hidden; border: 1px solid #4a5879; border-radius: 18px; background: linear-gradient(115deg, #242b47, #1a253b); }
+    .feature-lead { padding: 32px; border-bottom: 1px solid #414d68; }
+    .feature-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 16px; font-size: 13px; color: #c4cde0; }
+    .pill { padding: 3px 10px; border-radius: 6px; background: #d9e4ff; color: #25334d; font-size: 11px; font-weight: 700; }
+    .feature-lead h3 { margin: 0; font-size: clamp(25px, 3.5vw, 36px); line-height: 1.45; letter-spacing: -.04em; }
+    .feature-lead p { max-width: 740px; margin: 14px 0 0; color: #c4cde0; font-size: 15px; }
+    .insights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 28px 32px; gap: 26px; }
+    .insight { min-width: 0; }
+    .insight-number { color: #bacaff; font-size: 12px; font-weight: 700; }
+    .insight h4 { margin: 8px 0; font-size: 17px; line-height: 1.5; }
+    .insight p { margin: 0; color: #bac5db; font-size: 14px; }
+    .feature-actions { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 0 32px 30px; }
+    .feature-note { margin: 0; color: var(--muted); font-size: 13px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 48px; padding: 11px 22px; border: 1px solid #d9e4ff; border-radius: 8px; background: #d9e4ff; color: #182440; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .15s ease; }
+    .button:hover { background: #fff; }
+    .archive-description { margin: -8px 0 22px; color: var(--muted); font-size: 14px; }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .issue-card { display: flex; flex-direction: column; min-width: 0; padding: 28px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); text-decoration: none; transition: border-color .15s ease, background .15s ease; }
+    .issue-card:hover { border-color: #879cc8; background: #212a41; }
+    .card-top { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .month-number { display: grid; place-items: center; width: 52px; height: 52px; flex-shrink: 0; border: 1px solid #5d5369; border-radius: 12px; background: #343042; color: #f2d7c1; font-size: 23px; font-weight: 700; line-height: 1; }
+    .september .month-number { border-color: #405c71; background: #243a4c; color: #b7e3f6; }
+    .card-month { font-size: 15px; font-weight: 700; }
+    .card-type { display: block; color: var(--muted); font-size: 12px; }
+    .issue-card h3 { margin: 0 0 10px; font-size: 21px; line-height: 1.5; letter-spacing: -.03em; }
+    .issue-card p { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
+    .card-link { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); color: var(--accent); font-size: 14px; font-weight: 600; }
+    footer { margin-top: 16px; border-top: 1px solid var(--line); }
+    .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding-block: 24px; color: var(--muted); font-size: 11px; }
+    :focus-visible { outline: 3px solid #afccff; outline-offset: 4px; }
+    @media (max-width: 850px) {
+      .topbar-inner { flex-wrap: wrap; gap: 14px; }
+      .intro-inner { grid-template-columns: 1fr; gap: 24px; padding-block: 40px; }
+      .hero-art { width: min(100%, 440px); margin-inline: auto; }
+    }
+    @media (max-width: 700px) {
+      .container { width: calc(100% - 32px); }
+      .nav a { padding: 10px 12px; font-size: 12px; }
+      .hero-art { min-height: 290px; }
+      .hero-art::before { width: 360px; }
+      .orbit.two { width: min(90%, 350px); }
+      .orbit.three { width: min(70%, 265px); }
+      .orb-core { width: 140px; height: 140px; border-radius: 34px; }
+      .orb-core span { font-size: 60px; }
+      .float-tag { padding: 8px; font-size: 10px; }
+      .tag-two { top: 31%; }
+      .hero-actions .button { flex: 1 1 180px; }
+      .section-heading { align-items: flex-start; }
+      .feature-lead { padding: 24px; }
+      .insights { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+      .insight + .insight { border-top: 1px solid #414d68; padding-top: 20px; }
+      .feature-actions { align-items: stretch; flex-direction: column; padding: 0 24px 24px; }
+      .cards { grid-template-columns: 1fr; }
+      .issue-card { padding: 24px; }
+      .section { padding-bottom: 28px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#home" aria-label="Copilot 뉴스레터 홈">
+        <span class="brand-symbol" aria-hidden="true">✦</span>
+        <span><span class="brand-name">Copilot Newsletter</span><small>Microsoft Korea · SME&amp;C CxO</small></span>
+      </a>
+      <nav class="nav" aria-label="뉴스레터 메뉴">
+        <a href="#latest">이번 달(11월) 뉴스레터 - 주요 인사이트</a>
+        <a href="#archive">지난 뉴스레터</a>
+      </nav>
+    </div>
+  </header>
+  <main id="home">
+    <header class="intro">
+      <div class="container intro-inner">
+        <div class="intro-copy">
+          <p class="eyebrow">SME&amp;C CxO MONTHLY BRIEFING</p>
+          <h1>비즈니스 리더를 위한<br><span class="accent">Copilot 뉴스레터</span></h1>
+          <p class="intro-description">이번 달의 핵심 변화부터 지난 소식까지, 경영에 필요한 AI 인사이트를 확인하세요.</p>
+          <div class="hero-actions">
+            <a class="button" href="SMEC_CxO_Letter_Nov2026_FINAL.html">11월호 읽기 <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#archive">지난 뉴스레터 보기</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div>
+          <div class="orb-core"><span>✦</span></div>
+          <div class="float-tag tag-one"><span class="signal"></span> Executive insights</div>
+          <div class="float-tag tag-two"><b>AI</b> Business transformation</div>
+          <div class="float-tag tag-three"><b>01</b> 최신 인사이트</div>
+          <div class="float-tag tag-four"><b>›</b> Copilot for work</div>
+        </div>
+      </div>
+    </header>
+    <section class="section container" id="latest" aria-labelledby="latest-title">
+      <div class="section-heading">
+        <h2 id="latest-title">이번 달(11월) 뉴스레터 - 주요 인사이트</h2>
+        <span class="year">2026.11</span>
+      </div>
+      <article class="featured">
+        <div class="feature-lead">
+          <div class="feature-meta"><span class="pill">최신호</span><span>2026년 11월 뉴스레터</span></div>
+          <h3>같은 AI 예산으로,<br>더 설득력 있는 결과를</h3>
+          <p>AI 비용은 효율적으로, 보고 자료는 설득력 있게. 이번 달에는 로컬·클라우드 AI 활용과 PowerPoint의 새로운 업무 방식을 살펴봅니다.</p>
+        </div>
+        <div class="insights">
+          <div class="insight">
+            <span class="insight-number">01 · AI 비용 효율</span>
+            <h4>Windows Hybrid Intelligence</h4>
+            <p>로컬과 클라우드의 역할을 나누고, FinOps 관점에서 AI 크레딧과 예산을 관리합니다.</p>
+          </div>
+          <div class="insight">
+            <span class="insight-number">02 · 보고 품질</span>
+            <h4>PowerPoint Skills</h4>
+            <p>텍스트 중심 장표를 시각화하고, 검증된 업무 흐름을 Skill로 표준화합니다.</p>
+          </div>
+          <div class="insight">
+            <span class="insight-number">03 · 대화형 프레젠테이션</span>
+            <h4>Interactive Slide</h4>
+            <p>데이터와 정보를 클릭하며 탐색하고, 회의 중 질문에 맞춰 내용을 펼쳐 봅니다.</p>
+          </div>
+        </div>
+        <div class="feature-actions">
+          <p class="feature-note">함께 보기: Copilot Cowork 웨비나 · Microsoft Ignite 2026</p>
+          <a class="button" href="SMEC_CxO_Letter_Nov2026_FINAL.html">11월 뉴스레터 전체 읽기 <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </section>
+    <section class="section container" id="archive" aria-labelledby="archive-title">
+      <div class="section-heading">
+        <h2 id="archive-title">지난 뉴스레터</h2>
+        <span class="year">2026년</span>
+      </div>
+      <p class="archive-description">읽고 싶은 월호를 선택하세요. 각 카드를 클릭하면 해당 뉴스레터로 이동합니다.</p>
+      <div class="cards">
+        <a class="issue-card october" href="SMEC_CxO_Letter_Oct2026_FINAL.html" aria-label="2026년 10월 뉴스레터 읽기">
+          <div class="card-top"><span class="month-number" aria-hidden="true">10</span><div><span class="card-month">2026년 10월호</span><span class="card-type">Copilot · 기업 AI</span></div></div>
+          <h3>Copilot, 묻는 AI에서 일하는 AI로</h3>
+          <p>새로운 Copilot · Microsoft IQ · Windows Hybrid Intelligence</p>
+          <span class="card-link">10월 뉴스레터 읽기 <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="issue-card september" href="SMEC_CxO_Letter_Sep2026_FINAL.html" aria-label="2026년 9월 뉴스레터 읽기">
+          <div class="card-top"><span class="month-number" aria-hidden="true">09</span><div><span class="card-month">2026년 9월호</span><span class="card-type">새로운 모델 · 프레젠테이션</span></div></div>
+          <h3>이번 달, 놓치면 안 되는 3가지</h3>
+          <p>프론티어 모델 · 업무 위임 · PowerPoint Interactive Skills</p>
+          <span class="card-link">9월 뉴스레터 읽기 <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 SME&amp;C · COPILOT EXECUTIVE NEWSLETTER</span>
+    </div>
+  </footer>
+</body>
+</html>
