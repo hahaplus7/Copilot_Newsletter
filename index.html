@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SME&C CxO를 위한 Microsoft Copilot 월간 브리핑. 최신 인사이트와 지난 뉴스레터를 만나보세요.">
+  <meta name="description" content="SME&C CxO를 위한 Copilot Executive Newsletter. 최신 인사이트와 지난 뉴스레터를 만나보세요.">
   <meta name="theme-color" content="#080b18">
-  <title>Copilot Newsletter | SME&amp;C CxO</title>
+  <title>Copilot Executive Newsletter | SME&amp;C CxO</title>
   <style>
     :root {
       color-scheme: dark;
@@ -34,10 +34,11 @@
     a { color: inherit; }
     .container { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
     .topbar { position: relative; z-index: 1; border-bottom: 1px solid var(--line); background: rgba(8,11,24,.84); }
-    .topbar-inner { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 700; letter-spacing: .01em; }
-    .brand-symbol { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(167,139,250,.55); border-radius: 11px; background: linear-gradient(145deg, rgba(167,139,250,.3), rgba(103,232,249,.12)); color: var(--cyan); font-size: 19px; }
-    .brand small { display: block; color: var(--muted); font-size: 10px; font-weight: 600; letter-spacing: .16em; }
+    .topbar-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; font-weight: 750; letter-spacing: .01em; }
+    .brand-symbol { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; border: 1px solid rgba(167,139,250,.55); border-radius: 13px; background: linear-gradient(145deg, rgba(167,139,250,.3), rgba(103,232,249,.12)); color: var(--cyan); font-size: 22px; }
+    .brand-name { display: block; font-size: 17px; line-height: 1.2; letter-spacing: .035em; }
+    .brand small { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; font-weight: 600; letter-spacing: .18em; }
     .nav { display: flex; align-items: center; gap: 28px; color: #d7d9e8; font-size: 13px; }
     .nav a { text-decoration: none; }
     .nav a:hover { color: var(--cyan); }
@@ -58,7 +59,7 @@
     .hero::before { width: 520px; height: 520px; right: 7%; top: 8%; border: 1px solid rgba(167,139,250,.2); box-shadow: 0 0 100px rgba(114,76,210,.16), inset 0 0 90px rgba(103,232,249,.06); }
     .hero::after { width: 330px; height: 330px; right: 14%; top: 24%; border: 1px solid rgba(103,232,249,.22); box-shadow: 0 0 80px rgba(103,232,249,.12); }
     .hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 42px; padding-block: 70px; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 20px; color: #d3c5ff; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 20px; color: #d3c5ff; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
     .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--cyan); }
     h1 { max-width: 680px; margin: 0; font-size: clamp(46px, 6vw, 78px); line-height: 1.02; letter-spacing: -.055em; }
     h1 .accent { color: transparent; background: linear-gradient(95deg, #c4b5fd 3%, #7dd3fc 67%, #bef264 100%); background-clip: text; -webkit-background-clip: text; }
@@ -148,6 +149,7 @@
     @media (max-width: 430px) {
       .topbar-inner { height: 64px; }
       .brand { font-size: 13px; }
+      .brand-name { font-size: 12px; }
       .brand small { font-size: 8px; }
       h1 { font-size: 46px; }
       .hero-copy { font-size: 15px; }
@@ -165,9 +167,9 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#home" aria-label="Copilot Newsletter 홈">
+      <a class="brand" href="#home" aria-label="Copilot Executive Newsletter 홈">
         <span class="brand-symbol" aria-hidden="true">✦</span>
-        <span>MICROSOFT COPILOT<small>SME&amp;C · CxO BRIEFING</small></span>
+        <span><span class="brand-name">COPILOT EXECUTIVE NEWSLETTER</span><small>SME&amp;C · CxO BRIEFING</small></span>
       </a>
       <nav class="nav" aria-label="주요 메뉴">
         <a href="#latest">최신호</a>
@@ -181,7 +183,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-inner">
         <div>
-          <p class="eyebrow">Monthly executive briefing · November 2026</p>
+          <p class="eyebrow">COPILOT EXECUTIVE NEWSLETTER · NOVEMBER 2026</p>
           <h1 id="hero-title">AI의 다음 장면,<br><span class="accent">Copilot과 함께.</span></h1>
           <p class="hero-copy">SME&amp;C CxO를 위한 Microsoft Copilot 월간 브리핑. 중요한 변화와 비즈니스 리더를 위한 인사이트를 한곳에서 만나보세요.</p>
           <div class="hero-actions">
@@ -225,7 +227,7 @@
           <span class="pill"><span class="signal"></span> 2026년 11월호 · 최신 뉴스레터</span>
           <h3>같은 AI 예산으로,<br>더 설득력 있는 결과를</h3>
           <p>Windows Hybrid Intelligence, PowerPoint Skills, Interactive Slide를 통해 살펴보는 업무 효율과 Copilot 활용 인사이트.</p>
-          <span class="feature-meta">MICROSOFT KOREA SME&amp;C · CxO LETTER</span>
+          <span class="feature-meta">COPILOT EXECUTIVE NEWSLETTER · SME&amp;C CxO</span>
           <a class="feature-link" href="SMEC_CxO_Letter_Nov2026_FINAL.html">11월호 전체 보기 <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -252,14 +254,14 @@
     </section>
 
     <div class="container bottom-banner">
-      <div><strong>Copilot의 변화, 매달 한눈에.</strong><span>SME&amp;C CxO를 위한 월간 브리핑 아카이브</span></div>
+      <div><strong>Copilot Executive Newsletter</strong><span>SME&amp;C CxO를 위한 Copilot 월간 브리핑 아카이브</span></div>
       <a class="button button-secondary" href="SMEC_CxO_Letter_Nov2026_FINAL.html">최신호 확인하기 <span aria-hidden="true">→</span></a>
     </div>
   </main>
 
   <footer>
     <div class="container footer-inner">
-      <span>© 2026 SME&amp;C · Microsoft Copilot Newsletter</span>
+      <span>© 2026 SME&amp;C · Copilot Executive Newsletter</span>
       <span>MICROSOFT KOREA · SMALL, MEDIUM &amp; CORPORATE</span>
     </div>
   </footer>
